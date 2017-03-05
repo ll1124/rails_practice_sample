@@ -27,7 +27,7 @@
                 <td><%= post.email %></td>
                 <td><%= post.created_at %></td>
                 <td><%= link_to '수정', edit_post_path(post) %></td>
-                <td><%= link_to '삭제', post_path(post), method: :delete %></td>
+                <td><%= link_to '삭제', post_path(post), method: :delete, data: { confirm: '정말 삭제하시겠습니까?' } %></td>
             </tr>
             <% end %>
         </tbody>
